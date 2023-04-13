@@ -1,16 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useEffect} from 'react';
 import Routers from './Routers';
 import { onAuthStateChanged } from "firebase/auth";
-import { loggedInuser } from './actions/authAction'
-import { onAuthStateChanged } from "firebase/auth";
+import {authUser} from './actions/authAction'
+import { auth } from './firebase/config';
+import { useDispatch } from 'react-redux';
 
 
 function App() {
+  const dispatch = useDispatch()
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      if (user) dispatch(loggedInuser(user))
-      else { dispatch(loggedInuser(null)) }
+      if (user) dispatch(authUser(user))
+      else { dispatch(authUser(null)) }
     })
   }, [])
 
