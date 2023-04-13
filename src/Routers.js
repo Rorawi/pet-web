@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
-import Home from './components/Home/Home';
+// import Home from './components/Home/Home';
 import Order from './components/Order';
+import Search from './components/Search';
+import HomeScreen from './pages/HomeScreen';
 
 
 const Routers = () => {
@@ -9,8 +11,9 @@ const Routers = () => {
         <div>
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<Home/>}/>
+                    <Route path='/' element={<HomeScreen/>}/>
                     <Route path='/order' element={<Order/>} />
+                    <Route path='/search' element={<Search/>} />
                 </Routes>
             </BrowserRouter>
         </div>

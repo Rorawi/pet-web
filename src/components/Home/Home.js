@@ -21,6 +21,7 @@ import { BiCurrentLocation, BiSearch } from "react-icons/bi";
 import { BsFillHandbagFill, BsEyeFill,BsGooglePlay } from "react-icons/bs";
 import { GiRabbit, GiSeaTurtle, GiTurtleShell } from "react-icons/gi";
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -38,9 +39,9 @@ const Home = () => {
               <a href="#" className="nav-item">
                 US
               </a>
-              <a href="#" className="nav-item">
+              <Link to={'/search'} className="nav-item">
                 Create an account
-              </a>
+              </Link>
             </div>
           </nav>
         </header>
