@@ -42,10 +42,10 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <input type="submit" onClick={HandleLogin} />
-      </form>
       <Link to={'/register'}>
         <h2>register here</h2>
       </Link>
+      </form>
     </div>
   );
 };
