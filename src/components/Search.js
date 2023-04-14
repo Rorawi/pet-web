@@ -33,7 +33,6 @@ const Search = () => {
   }
   
 
-//   setDropdown(true)
 
   return (
     <div>
@@ -43,7 +42,7 @@ const Search = () => {
             type="input"
             placeholder="Enter your address to find local vendors"
           />
-          <BiSearch className="search-icon" onClick={console.log("jiji")} />
+          <BiSearch className="seesearch-icon" onClick={console.log("jiji")} />
         </div>
 
         <div className="searchnav-items">
@@ -80,6 +79,7 @@ const Search = () => {
                 <a href="#">Private Policies</a>
                 <a href="#">Cart</a>
                 <a href="#">Settings</a>
+                <a href="#">Delete Account</a>
                 </div>
                <div>
                     <hr/>
@@ -96,10 +96,14 @@ const Search = () => {
       </div>
 
       <section className="recommended-section">
-        <div className="recommended-div"></div>
+        <div className="recommended-div">
+
+        </div>
+
+<div>thumbnails</div>
       </section>
     </div>
-  );
+  ); 
 };
 
 export default Search;

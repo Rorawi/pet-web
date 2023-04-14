@@ -245,12 +245,14 @@ h5,
   width: 290px;
   height: 290px;
   border-radius: 12px;
+  object-fit: cover;
 }
 
 .racoon {
   /* max-width: 130%; */
   scale: 1;
   height: 290px;
+  object-fit: cover;
 }
 
 .img img {
@@ -278,6 +280,7 @@ h5,
   height: 314px;
   border-radius: 12px;
   zoom: 1;
+  object-fit: cover;
 }
 
 .download-platforms {

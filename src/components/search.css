@@ -27,7 +27,7 @@
     border: none;
   }
   
-  .search-icon {
+  .seesearch-icon {
     font-size: 16px;
     color: #19191B;
     position: absolute;
@@ -105,6 +105,10 @@
     justify-content: center;
   }
 
+  .drop-items:last-child {
+    color: red;
+  }
+
   .close-btn {
     color: #dce2ea;
     font-size: 24px;
@@ -137,4 +141,17 @@
     font-size: 15px;
     font-weight: 500;
     margin-left: 5px;
+  }
+
+  .recommended-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .recommended-div {
+    width: 660;
+    height: 600;
+    background-color: #F0F0F0;
+    border-radius: 12px;
   }
