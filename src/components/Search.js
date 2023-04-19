@@ -79,7 +79,7 @@ const Search = () => {
         </div>
         <BiChevronDown className="chevron-down" onClick={toggleMenu}/>
 
-        <div className="searchnav-items">
+        <div className="searchnav-items ">
             <a href="#" className="searchnav-item">
             Breed
           </a>
