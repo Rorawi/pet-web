@@ -92,3 +92,13 @@
     color:  #fafadf;
     transition: .2s;
 }
+
+@media screen and (max-width: 414px) {
+    .form {
+      display: block;
+    }
+
+    .form form {
+        width: 0;
+    }
+}
