@@ -346,6 +346,10 @@ hr {
   text-decoration: none;
 }
 
+.more-link {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 414px) {
   .recommended-section {
     display: flex;
@@ -394,9 +398,9 @@ hr {
   display: block;
 }
 
-.searchnav-items a {
+/* .searchnav-items a {
   display: none;
-}
+} */
 
 .searchinput-div input {
   max-width: 250px;

@@ -4,15 +4,17 @@ import AuthReducer from "../reducers/authReducer";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import FilterReducer from "../reducers/filterReducer";
+import ItemReducer from "../reducers/itemReducer";
 
 const persistConfig = {
     key: 'root',
     storage}
 
 let reducers = combineReducers({
-    UsersReducer:UserReducer,
+    UserReducer:UserReducer,
     AuthReducer:AuthReducer,
-    FilterReducer: FilterReducer
+    FilterReducer: FilterReducer,
+    ItemReducer: ItemReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, reducers);

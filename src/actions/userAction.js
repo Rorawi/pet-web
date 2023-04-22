@@ -1,6 +1,7 @@
-export const addUser =(data)=> {
+export const addUser =(user)=> {
     return{
         type: 'ADD_USER',
-        payload: data
+        payload: user
     }
 }
+

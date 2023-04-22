@@ -19,9 +19,8 @@ import wini from "../components/images/wini.png";
 
 import { useSelector } from "react-redux";
 
-const Search = () => {
-  // const item =useSelector((state)=>(state.recommendedItems))
-  // console.log(item);
+const Search = (props) => {
+  console.log(props);
   const [dropdown, setDropdown] = useState(false);
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState("");
@@ -79,7 +78,8 @@ const Search = () => {
         </div>
         <BiChevronDown className="chevron-down" onClick={toggleMenu}/>
 
-        <div className="searchnav-items ">
+        <div className="searchnav-items">
+          {menu? <>
             <a href="#" className="searchnav-item">
             Breed
           </a>
@@ -92,6 +92,7 @@ const Search = () => {
           <a href="#" className="searchnav-item">
             Location
           </a>
+          </>: null}
 
           <div className="profile-div">
             <img
@@ -314,7 +315,7 @@ const Search = () => {
         
       </section>
       </div>
-      <Link>
+      <Link to={'/more'} className="more-link">
       <div className="load-div">
       <button className="load">Load More</button>
       </div>

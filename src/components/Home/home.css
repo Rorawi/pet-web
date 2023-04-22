@@ -392,4 +392,16 @@ h5,
   .home-section {
     flex-wrap: wrap;
   }
+
+  
+  .details-btn {
+    background-color: #000;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    left: 174px;
+    padding: 5px 7px;
+    position: absolute;
+    top: 10px;
+}
 }

@@ -1,0 +1,149 @@
+.cart-ship-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+
+.shipping-info,
+.cart-info {
+  height: 760px;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.cart-info {
+  width: 824px;
+  background-color: #f0f0f0;
+  overflow: scroll;
+}
+
+
+.shipping-info {
+  width: 408px;
+  background-color: #19191b;
+  margin-left: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* tbody {
+  position: relative;
+} */
+
+.cancel-order {
+  font-weight: 600;
+  float: center;
+  position: relative;
+  top: 36px;
+}
+
+/* .flexwithclosebtn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  } */
+
+.td {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.td img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.td div {
+  margin-left: 10px;
+}
+
+.total-div {
+  margin-top: 30px;
+  float: right;
+  width: 50%;
+}
+
+.total-div div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shipping-info h2,
+.shipping-info h5 {
+  color: #f0f0f0;
+}
+
+.shipping-info h5 {
+  font-weight: 400;
+}
+
+.shipping-info h2,.cart-info h2 {
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+form {
+  margin-top: 40px;
+}
+
+.two-in-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.two-in-one div {
+  display: flex;
+  flex-direction: column;
+}
+
+ form input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+  outline: none;
+  color: #f0f0f0;
+  margin-bottom: 25px;
+  padding: 12px;
+}
+
+.two-in-one input {
+  max-width: 150px;
+}
+
+form div label {
+  color: #f0f0f0;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.checkbox {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.checkbox input {
+  padding: 0px;
+}
+
+.submit-div {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
