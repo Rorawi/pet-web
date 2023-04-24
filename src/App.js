@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useEffect,useState} from 'react';
 import Routers from './Routers';
 import { onAuthStateChanged } from "firebase/auth";
 import {authUser} from './actions/authAction'
@@ -11,6 +11,7 @@ import { collection, query, onSnapshot } from "firebase/firestore";
 
 function App() {
   const dispatch = useDispatch()
+  const [loading,setLoading] = useState(true)
 
 useEffect(()=> {
 const readData = () => {
@@ -52,7 +53,7 @@ readData()
   return (
     <div className="App">
       {/* <Item/> */}
-      <Routers/>
+     {loading?  <Routers/>: <h1>...Loading</h1>}
     </div>
   );
 }

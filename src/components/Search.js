@@ -36,7 +36,7 @@ const Search = (props) => {
   const toggleMenu = (e) => {
     e.preventDefault();
     console.log("clicked");
-    setMenu(true);
+    setMenu(!menu);
   };
 
   const closeDropdown = () => {
@@ -78,8 +78,8 @@ const Search = (props) => {
         </div>
         <BiChevronDown className="chevron-down" onClick={toggleMenu}/>
 
-        <div className="searchnav-items">
-          {menu? <>
+        <div className={`searchnav-items ${menu ? "open" : ""}`}>
+
             <a href="#" className="searchnav-item">
             Breed
           </a>
@@ -92,7 +92,6 @@ const Search = (props) => {
           <a href="#" className="searchnav-item">
             Location
           </a>
-          </>: null}
 
           <div className="profile-div">
             <img
@@ -117,7 +116,7 @@ const Search = (props) => {
                     <div className="drop-items">
                       <a href="#">Profile</a>
                       <a href="#">Private Policies</a>
-                      <a href="#">Cart</a>
+                      <Link to={"/addtocart"}>Cart</Link>
                       <a href="#">Settings</a>
                       <a href="#">Delete Account</a>
                     </div>

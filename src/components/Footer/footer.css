@@ -40,6 +40,7 @@ footer {
     font-size: 24px;
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 
@@ -70,4 +71,32 @@ footer {
 .info h2  {
     font-size: 20px;
     text-align: left;
+}
+
+@media screen and (max-width: 414px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+  }
+
+  .brandName {
+    font-size: 12px;
+  }
+
+  .paw-icon {
+    font-size: 16px;
+}
+
+
+
+.socials a {
+  margin: 0 10px 0 0;
+  font-size: 15px;
+}
+
+.details h2 {
+  font-weight: 500;
+  font-size: 14px;
+}
 }

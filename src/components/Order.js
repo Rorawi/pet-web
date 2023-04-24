@@ -69,7 +69,7 @@ const Order = () => {
             <h3>until delivered</h3>
             <hr />
             <p>
-              Your prefect pet will be there shortly! You can always come back
+              Your perfect pet will be there shortly! You can always come back
               here to track your order.
             </p>
             <div className="hide-btn-div" onClick={hideOrderStatus}>

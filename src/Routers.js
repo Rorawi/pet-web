@@ -25,13 +25,35 @@ const Routers = () => {
               </ProtectedRoute>
             }
           />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/more" element={<MoreSection/>} />
-          <Route path="/moreofsameitem" element={<MoreOfSameItem/>} />
-          <Route path="/addtocart" element={<AddToCart/>} />
+          <Route
+            path="/login"
+            element={
+                <Login />
+            }
+          />
+          <Route path="/register" element={
+          <Register />
+          } />
+          <Route path="/order" element={
+            <ProtectedRoute>
+          <Order />
+          </ProtectedRoute>
+          } />
+          <Route path="/search" element={
+            <ProtectedRoute>
+          <Search />
+          </ProtectedRoute>
+          } />
+          <Route path="/more" element={
+            <ProtectedRoute>
+          <MoreSection />
+          </ProtectedRoute>
+          } />
+          <Route path="/moreofsame4343432`2element={
+            <ProtectedRoute>
+          <AddToCart />
+          </ProtectedRoute>
+          } />
         </Routes>
       </BrowserRouter>
     </div>

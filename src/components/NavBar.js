@@ -12,6 +12,8 @@ import {
   BiChevronDown,
   BiBasket,
   BiSliderAlt,
+  BiMenu,
+  BiChevronUp,
 } from "react-icons/bi";
 import { FaDog, FaSearch, FaShoppingBag, FaShoppingCart } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
@@ -22,111 +24,110 @@ import { useDispatch } from "react-redux";
 import wini from "../components/images/wini.png";
 import Footer from "./Footer/Footer";
 const NavBar = () => {
-    const [dropdown, setDropdown] = useState(false);
-    const [menu, setMenu] = useState(false);
-    const [search, setSearch] = useState("");
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
+  const [dropdown, setDropdown] = useState(false);
+  const [menu, setMenu] = useState(false);
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-    const clickProfile = (e) => {
-        e.preventDefault();
-        console.log("clicked");
-        setDropdown(true);
-      };
-    
-      const toggleMenu = (e) => {
-        e.preventDefault();
-        console.log("clicked");
-        setMenu(true);
-      };
-    
-      const closeDropdown = () => {
-        setDropdown(false);
-      };
-  
-      const SignOut = async (e) => {
-          e.preventDefault();
-          try {
-            {
-              signOut(auth);
-            }
-            navigate("/", { replace: true });
-          } catch (error) {
-            console.log(error);
-            alert("An error occured");
-          }
-        };
-    return (
-        <div>
-            <div className="more-div">
-          <div className="more-header">
-            <FaDog className="dog-icon" />
-  
-            <div className="morenav-items">
-              <Link to={"/"} className="morenav-item">
-                Home
-              </Link>
-              <Link to={"/more"} className="morenav-item">
-                Categories
-              </Link>
-              <Link href="#" className="morenav-item">
-                Blog
-              </Link>
-              <Link href="#" className="morenav-item">
-                Contact
-              </Link>
-            </div>
-          </div>
-  
-          <div className="morenav-items">
-            <FaSearch className="morenav-icon" />
-            <Link to={"/addtocart"} className="more-link">
-              <FaShoppingCart className="morenav-icon" />
+  const clickProfile = (e) => {
+    e.preventDefault();
+    console.log("clicked");
+    setDropdown(true);
+  };
+
+  const toggleMenu = (e) => {
+    // e.preventDefault();
+    setMenu(!menu);
+    console.log("clicked");
+  };
+
+  const closeDropdown = () => {
+    setDropdown(false);
+  };
+
+  const SignOut = async (e) => {
+    e.preventDefault();
+    try {
+      {
+        signOut(auth);
+      }
+      navigate("/", { replace: true });
+    } catch (error) {
+      console.log(error);
+      alert("An error occured");
+    }
+  };
+  return (
+    <div>
+      <div className="more-div">
+        <div className="more-header">
+          <FaDog className="dog-icon" />
+         {menu? <BiChevronUp className="menubtn" onClick={toggleMenu}/>: <BiChevronDown className="menubtn" onClick={toggleMenu}/>}
+          <div className={` morenav-items-link ${menu ? "active" : ""}`}>
+            <Link to={"/"} className="morenav-item">
+              Home
             </Link>
-            <div className="profile-div">
-              <img
-                src={wini}
-                alt="profile"
-                className="profile"
-                onClick={clickProfile}
-              />
-            </div>
-            <div>
-              {dropdown ? (
-                <>
-                  <div
-                    className="dropdown-div"
-                    //  onClick={closeDropdown}
-                  >
-                    <div className="dropdown">
-                      <AiOutlineClose
-                        onClick={closeDropdown}
-                        className="close-btn"
-                      />
-                      <div className="drop-items">
-                        <a href="#">Profile</a>
-                        <a href="#">Private Policies</a>
-                        <a href="#">Cart</a>
-                        <a href="#">Settings</a>
-                        <a href="#">Delete Account</a>
-                      </div>
-                      <div>
-                        <hr />
-                        <div className="logout-div" onClick={SignOut}>
-                          <BiLogOut className="logout" />
-                          <h3>Log out</h3>
-                        </div>
+            <Link to={"/more"} className="morenav-item">
+              Categories
+            </Link>
+            <Link href="#" className="morenav-item">
+              Blog
+            </Link>
+            <Link href="#" className="morenav-item">
+              Contact
+            </Link>
+          </div>
+        </div>
+
+        <div className="morenav-items">
+          <FaSearch className="morenav-icon" />
+          <Link to={"/addtocart"} className="more-link">
+            <FaShoppingCart className="morenav-icon" />
+          </Link>
+          <div className="profile-div">
+            <img
+              src={wini}
+              alt="profile"
+              className="profile"
+              onClick={clickProfile}
+            />
+          </div>
+          <div>
+            {dropdown ? (
+              <>
+                <div
+                  className="dropdown-div"
+                  //  onClick={closeDropdown}
+                >
+                  <div className="dropdown">
+                    <AiOutlineClose
+                      onClick={closeDropdown}
+                      className="close-btn"
+                    />
+                    <div className="drop-items">
+                      <a href="#">Profile</a>
+                      <a href="#">Private Policies</a>
+                      <Link to={"/addtocart"}>Cart</Link>
+                      <a href="#">Settings</a>
+                      <a href="#">Delete Account</a>
+                    </div>
+                    <div>
+                      <hr />
+                      <div className="logout-div" onClick={SignOut}>
+                        <BiLogOut className="logout" />
+                        <h3>Log out</h3>
                       </div>
                     </div>
                   </div>
-                </>
-              ) : null}
-            </div>
+                </div>
+              </>
+            ) : null}
           </div>
         </div>
-            
-        </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default NavBar;

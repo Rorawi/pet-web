@@ -34,7 +34,7 @@ nav {
 
 .brandName {
   color: white;
-  font-size: 20;
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -225,7 +225,7 @@ h5,
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: nowrap;
 }
 
 .stepsDiv {
@@ -271,6 +271,7 @@ h5,
 .download-div {
   margin-top: 180px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -320,6 +321,18 @@ h5,
     height: 30vh;
   }
 
+  .brandName {
+    font-size: 12px;
+}
+
+.paw-icon {
+  font-size: 16px;
+}
+
+.nav-items .nav-item {
+  font-size: 7px;
+
+}
   .title {
     height: 10vh;
   }
@@ -340,7 +353,7 @@ h5,
     width: 100%;
     max-width: 300px;
     height: 4vh;
-    padding: 5px 10px 10px 15px;
+    padding: 5px 10px 10px 20px;
   }
 
   ::placeholder {
@@ -349,7 +362,7 @@ h5,
 
   .search-icon-btn {
     position: absolute;
-    right: 40px;
+    right: 65px;
     width: 20px;
     height: 20px;
     background-color: black;
@@ -363,13 +376,12 @@ h5,
   }
 
   .location-icon {
-    left: 40px;
+    left: 59px;
     font-size: 12px;
   }
 
-  .home-section {
-    flex-wrap: nowrap;
-    flex-direction: column;
+  .thumbnail {
+    text-align: center;
   }
 
   .thumbnail .icon {
@@ -389,9 +401,12 @@ h5,
     flex-wrap: wrap;
   }
 
-  .home-section {
-    flex-wrap: wrap;
+  .popular-vendor {
+    margin: 0 0 15px 0;
   }
+  .home-section {
+    height: 100px;
+  } 
 
   
   .details-btn {
@@ -399,9 +414,92 @@ h5,
     border: none;
     border-radius: 12px;
     color: #fff;
-    left: 174px;
+    left: 213px;
     padding: 5px 7px;
     position: absolute;
     top: 10px;
+}
+
+.stepsDiv{
+  margin-bottom: 20px;
+}
+
+.download-div {
+  margin-top: 60px;
+}
+
+.download-platforms {
+  display: flex;
+  justify-content: flex-start;
+  /* flex-direction: column; */
+  margin: 20px 0 50px;
+}
+
+.download {
+  width: 100px;
+  height: 30px;
+  border-radius: 6px;
+}
+
+.download-text h5 {
+  font-size: 7px;
+  text-align: center;
+}
+
+.download-text h2 {
+  font-size: 10px;
+  text-align: center;
+}
+
+.download-pet-img {
+  width: 332px;
+  height: 214px;
+}
+
+.deliverySteps-section {
+  flex-wrap: wrap;
+}
+}
+
+
+@media screen and (max-width: 320px) {
+  .popular-vendors-section h1 {
+    font-size: 17px;
+}
+
+.title input {
+  max-width: 211px;
+  padding: 5px 10px 10px 18px;
+}
+
+img {
+  overflow: hidden;
+  width: 248px;
+  height: 290px;
+}
+
+.details-btn {
+  color: #fff;
+  left: 149px;
+  position: absolute;
+  top: 10px;
+}
+  .download-pet-img {
+    width: 271px;
+    height: 171px;
+}
+
+.download {
+  width: 84px;
+  height: 30px;
+}
+
+.download-text h2 {
+  font-size: 7px;
+  text-align: center;
+}
+
+::placeholder {
+  font-size: 8px;
 }
 }
