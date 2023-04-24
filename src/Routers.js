@@ -49,7 +49,12 @@ const Routers = () => {
           <MoreSection />
           </ProtectedRoute>
           } />
-          <Route path="/moreofsame4343432`2element={
+          <Route path="/moreofsameitem" element={
+            <ProtectedRoute>
+          <MoreOfSameItem />
+          </ProtectedRoute>
+          } />
+          <Route path="/addtocart" element={
             <ProtectedRoute>
           <AddToCart />
           </ProtectedRoute>
