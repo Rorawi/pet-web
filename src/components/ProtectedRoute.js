@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import {connect} from 'react-redux'
 
 const ProtectedRoute = ({children,authUser}) => {
-    if(authUser) 
+    if(!authUser) 
         return <Navigate to='/login' replace='true'/>
         // alert("login with correct details")
         return children

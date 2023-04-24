@@ -462,7 +462,7 @@ h5,
 }
 
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 320px) {
   .popular-vendors-section h1 {
     font-size: 17px;
 }
