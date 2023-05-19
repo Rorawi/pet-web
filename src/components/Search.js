@@ -16,11 +16,16 @@ import panda from "../components/images/panda.jpg";
 import parrot from "../components/images/parrot.jpg";
 import downloadcat from "../components/images/download-cat.jpg";
 import wini from "../components/images/wini.png";
-
+// import ItemData from "./ItemData";
 import { useSelector } from "react-redux";
 
+
+
 const Search = (props) => {
+  // const myData = useSelector(state => state.UserReducer.user);
+  // console.log(myData);
   console.log(props);
+  // console.log(user);
   const [dropdown, setDropdown] = useState(false);
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState("");
@@ -134,6 +139,8 @@ const Search = (props) => {
           </div>
         </div>
       </div>
+      {/* <ItemData/> */}
+      {/* <p>Name:{myData[user].name}</p> */}
 
       <section className="recommended-section">
         <div>

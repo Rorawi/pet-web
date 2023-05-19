@@ -18,11 +18,21 @@
   overflow: scroll;
 }
 
-
 .shipping-info {
   width: 408px;
   background-color: #19191b;
   margin-left: 20px;
+}
+
+.quantity-input {
+  width: 100%;
+  max-width: 80px;
+
+  background-color: none;
+    border: 1px solid #f0f0f0;
+    padding: 10px 6px;
+    border-radius: 12px;
+    margin-right: 5px;
 }
 
 table {
@@ -92,7 +102,8 @@ td {
   font-weight: 400;
 }
 
-.shipping-info h2,.cart-info h2 {
+.shipping-info h2,
+.cart-info h2 {
   font-size: 32px;
   margin: 15px 0;
 }
@@ -112,7 +123,8 @@ form {
   flex-direction: column;
 }
 
- form input {
+form input[type="text"],
+form input[type="email"] {
   background-color: transparent;
   border: 0;
   border-bottom: 1px solid #f0f0f0;
@@ -134,12 +146,14 @@ form div label {
 }
 
 .checkbox {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .checkbox input {
-  padding: 0px;
+  margin-right: 5px;
 }
 
 .submit-div {
@@ -155,58 +169,68 @@ form div label {
     justify-content: space-evenly;
     align-items: center;
     overflow: hidden;
-}
+  }
 
-.cart-info {
-  width: 100%;
-}
+  .cart-info {
+    width: 100%;
+  }
 
-.shipping-info h2, .cart-info h2 {
-  font-size: 12px;
-  margin: 5px 0;
-}
+  .shipping-info h2,
+  .cart-info h2 {
+    font-size: 12px;
+    margin: 5px 0;
+  }
 
-form {
-  margin-top: 20px;
-}
+  form {
+    margin-top: 20px;
+  }
 
-.two-in-one input {
-  max-width: 97px;
-}
+  .two-in-one input {
+    max-width: 97px;
+  }
 
-form input {
-  margin-bottom: 16px;
-  padding: 4px;
-}
- table, thead, tbody, th, td, tr {
-  display: block;
-}
+  form input[type="text"],
+  form input[type="email"] {
+    margin-bottom: 16px;
+    padding: 4px;
+  }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
 
-thead tr {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
 
-td {
-  margin-bottom: 10px;
-}
+  td {
+    margin-bottom: 10px;
+  }
 
-/* td:before {
+  /* td:before {
   content: attr(data-th);
   font-weight: bold;
   width: 50%;
   display: inline-block;
 } */
 
-td:last-child {
-  /* hide the last table cell */
-  border-bottom: none;
-}
-.shipping-info {
-  margin-top: 30px;
-  width: 100%;
-  width: 270px;
-  height: 100%;
-}
+  td:last-child {
+    /* hide the last table cell */
+    border-bottom: none;
+  }
+  .shipping-info {
+    margin-top: 30px;
+    width: 100%;
+    width: 270px;
+    height: 100%;
+  }
+
+  .checkbox {
+  }
 }

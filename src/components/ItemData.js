@@ -1,37 +1,24 @@
 import React from "react";
 import Search from "./Search";
 import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 
 const ItemData = (props) => {
-  return (
-    <div>
-      {props.users.map((user, index) => {
-        return (<Search data={user} key={index} />
-        );
-      })}
-    </div>
-  );
+  
+  const myData = useSelector(state => state.UserReducer.user);
+  console.log(myData);
+  {props.users.map((info,index) => {
+    return (
+        <Search data={info}
+              key={index}
+              />
+    )
+})}
 };
-
-
-
-const mapStateToProps = (state) => ({
-    users: state.UserReducer.user,
-});
-// const Item = (props) => {
-//     return (
-//       <div>
-//         {props.users.map((user, index) => {
-//           return (
-//             <div key={index}>
-//               <p>Name: {user.name}</p>
-//               <p>Price: {user.price}</p>
-//             </div>
-//           );
-//         })}
-//       </div>
-//     );
-//   };
   
 
-export default connect(mapStateToProps)(ItemData);
+const mapStateToProps =(state) => ({
+  users:state.UserReducer.user
+})
+
+export default connect(mapStateToProps) (ItemData);

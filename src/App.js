@@ -15,13 +15,13 @@ function App() {
 
 useEffect(()=> {
 const readData = () => {
-  const q = query(collection(db, "pets"));
+  const q = query(collection(db, "pet"));
 const unsubscribe = onSnapshot(q, (querySnapshot) => {
   const pets = [];
   querySnapshot.forEach((doc) => {
       pets.push(doc.data());
-      dispatch(addUser(pets))
-  });
+    });
+    dispatch(addUser(pets))
   console.log(pets);
 });
 }
@@ -52,7 +52,7 @@ readData()
 
   return (
     <div className="App">
-      {/* <Item/> */}
+      {/* <ItemData/> */}
      {loading?  <Routers/>: <h1>...Loading</h1>}
     </div>
   );

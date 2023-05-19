@@ -24,7 +24,6 @@ import Footer from "./Footer/Footer";
 import NavBar from "./NavBar";
 
 const AddToCart = (props) => {
-
   const [name, setName] = useState("");
   const [surname, setSurName] = useState("");
   const [email, setEmail] = useState("");
@@ -32,10 +31,11 @@ const AddToCart = (props) => {
   const [address, setAddress] = useState("");
   const [zipcode, setZipcode] = useState("");
   const [country, setCountry] = useState("");
+  const [numofItems, setNumofItems] = useState(0);
   const dispatch = useDispatch();
 
-  const handleSubmit =()=> {
-    console.log(name,surname,email,phonenumber,address,zipcode,country);
+  const handleSubmit = () => {
+    console.log(name, surname, email, phonenumber, address, zipcode, country);
     setName("");
     setSurName("");
     setEmail("");
@@ -43,12 +43,11 @@ const AddToCart = (props) => {
     setAddress("");
     setZipcode("");
     setCountry("");
-  }
-
+  };
 
   return (
     <div className="more-sec">
-      <NavBar/>
+      <NavBar />
       <div className="cart-ship-info">
         <div className="cart-info">
           <h2>Shopping Cart</h2>
@@ -84,13 +83,12 @@ const AddToCart = (props) => {
                   </select>
                 </td>
                 <td>
-                  <select className="select">
-                    <option value="">Quantity:</option>
-                    <option value="apple">Apple</option>
-                    <option value="banana">Banana</option>
-                    <option value="orange">Orange</option>
-                    <option value="kiwi">Kiwi</option>
-                  </select>
+                  <input
+                    type="number"
+                    value={numofItems}
+                    className="quantity-input"
+                    onChange={(e) => setNumofItems(e.target.value)}
+                  />
                 </td>
                 <td>$70</td>
                 <AiOutlineClose className="cancel-order" />
@@ -137,23 +135,26 @@ const AddToCart = (props) => {
             </div>
             <div>
               <label>Email</label>
-              <input type="text" 
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
               <label>Phone number</label>
-              <input type="text" 
-              value={phonenumber}
-              onChange={(e) => setPhonenumber(e.target.value)}
+              <input
+                type="text"
+                value={phonenumber}
+                onChange={(e) => setPhonenumber(e.target.value)}
               />
             </div>
             <div>
               <label>Street Address</label>
-              <input type="text" 
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
+              <input
+                type="text"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
               />
             </div>
 
@@ -176,25 +177,24 @@ const AddToCart = (props) => {
               </div>
             </div>
             <div className="checkbox">
-                <input
-                  type="checkbox"
-                  />
-                  <h5>Use as billing address</h5>
-              </div>
+              <input type="checkbox" />
+              <h5>Use as billing address</h5>
+            </div>
 
-              <Link to={"/order"} className="submit-div">
-              <button className="submit" onClick={handleSubmit}>Continue payment</button>
-              </Link>
-           
+            <Link to={"/order"} className="submit-div">
+              <button className="submit" onClick={handleSubmit}>
+                Continue payment
+              </button>
+            </Link>
           </form>
         </div>
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <hr />
       <Footer />
     </div>
