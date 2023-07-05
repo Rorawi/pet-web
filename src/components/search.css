@@ -276,6 +276,7 @@ hr {
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
+  flex-wrap: wrap;
 }
 
 .pricingthumbnail {
@@ -284,6 +285,8 @@ hr {
   border-radius: 15px;
   margin-left: 20px;
   width: 260px;
+
+  margin-bottom: 20px;
 }
 
 .pricingthumbnail .img-div {

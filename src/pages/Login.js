@@ -20,7 +20,7 @@ const Login = () => {
       console.log(user);
     } catch (e) {
       console.log(e);
-      alert('Invalid email/password')
+      // alert('Invalid email/password')
 
     }
 
@@ -70,5 +70,7 @@ const Login = () => {
     </div>
   );
 };
+
+
 
 export default Login;

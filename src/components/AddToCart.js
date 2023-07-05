@@ -23,7 +23,7 @@ import wini from "../components/images/wini.png";
 import Footer from "./Footer/Footer";
 import NavBar from "./NavBar";
 
-const AddToCart = (props) => {
+const AddToCart = ({img,desc}) => {
   const [name, setName] = useState("");
   const [surname, setSurName] = useState("");
   const [email, setEmail] = useState("");
@@ -33,6 +33,9 @@ const AddToCart = (props) => {
   const [country, setCountry] = useState("");
   const [numofItems, setNumofItems] = useState(0);
   const dispatch = useDispatch();
+
+
+  console.log(img,desc);
 
   const handleSubmit = () => {
     console.log(name, surname, email, phonenumber, address, zipcode, country);
@@ -62,11 +65,11 @@ const AddToCart = (props) => {
             </thead>
             <tbody>
               <tr>
-                <td>
+              <td>
                   <div className="td">
-                    <img src={snake} alt="" />
+                    <img src={img} alt="" />
                     <div>
-                      <h5> Some description here</h5>
+                      <h5>{desc}</h5>
                       <h6>Color</h6>
                     </div>
                   </div>

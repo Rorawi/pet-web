@@ -20,9 +20,9 @@ const Routers = () => {
           <Route
             path="/seehomesearch"
             element={
-              <ProtectedRoute>
+              // <ProtectedRoute>
                 <SeeHomeSearch />
-              </ProtectedRoute>
+              // </ProtectedRoute>
             }
           />
           <Route
@@ -35,29 +35,29 @@ const Routers = () => {
           <Register />
           } />
           <Route path="/order" element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
           <Order />
-          </ProtectedRoute>
+          // </ProtectedRoute>
           } />
           <Route path="/search" element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
           <Search />
-          </ProtectedRoute>
+          // </ProtectedRoute>
           } />
           <Route path="/more" element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
           <MoreSection />
-          </ProtectedRoute>
+          // </ProtectedRoute>
           } />
           <Route path="/moreofsameitem" element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
           <MoreOfSameItem />
-          </ProtectedRoute>
+          // </ProtectedRoute>
           } />
           <Route path="/addtocart" element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
           <AddToCart />
-          </ProtectedRoute>
+          // </ProtectedRoute>
           } />
         </Routes>
       </BrowserRouter>

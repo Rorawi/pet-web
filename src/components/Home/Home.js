@@ -39,7 +39,7 @@ const Home = () => {
               <a href="#" className="nav-item">
                 US
               </a>
-              <Link to={'/seehomesearch'} className="nav-item">
+              <Link to={'/login'} className="nav-item">
                 Create an account
               </Link>
             </div>
